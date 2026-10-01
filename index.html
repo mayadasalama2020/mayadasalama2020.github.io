@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mayada Salama | Healthcare Data Analyst & Biostatistician</title>
+<meta name="description" content="Healthcare data analyst and biostatistician with 18+ years of clinical pharmacy experience. Python, SQL, Power BI.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f6f8f7;--surface:#fff;--ink:#14221f;--muted:#55645f;--line:#d8e0dd;--accent:#0b6e63;--accent-ink:#fff;--soft:#e2f1ee}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1816;--surface:#152421;--ink:#e8f1ee;--muted:#9bb0aa;--line:#26403b;--accent:#4fd1bd;--accent-ink:#06211d;--soft:#173a35}}
+:root[data-theme=dark]{--bg:#0e1816;--surface:#152421;--ink:#e8f1ee;--muted:#9bb0aa;--line:#26403b;--accent:#4fd1bd;--accent-ink:#06211d;--soft:#173a35}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;padding-top:env(safe-area-inset-top,0px)}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.2;margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav .in{max-width:980px;margin:auto;padding:10px 20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.nav b{font-family:Fraunces,serif;margin-right:auto}
+.nav a{text-decoration:none;color:var(--muted);font-size:14px}
+.nav a:hover{color:var(--accent)}
+button{font:inherit;cursor:pointer}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:4px 10px}
+main{max-width:980px;margin:auto;padding:0 20px 60px}
+section{padding-top:56px}
+h2{font-size:28px;margin-bottom:20px}
+.hero{padding-top:48px}
+.hero h1{font-size:clamp(34px,6vw,56px);max-width:16ch}
+.hero p.lead{max-width:62ch;color:var(--muted);font-size:18px;margin:18px 0}
+.roles{color:var(--accent);font-weight:600}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;border:1px solid var(--accent);text-decoration:none;font-weight:600}
+.btn.p{background:var(--accent);color:var(--accent-ink)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:32px}
+.stat{border-left:3px solid var(--accent);padding:4px 14px}
+.stat b{display:block;font:700 26px Fraunces,serif}
+.stat span{color:var(--muted);font-size:14px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.chip{background:var(--surface);border:1px solid var(--line);color:var(--ink);padding:6px 14px;border-radius:99px;font-size:14px}
+.chip[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.card[hidden]{display:none}
+.card h3{font-size:19px}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{background:var(--soft);color:var(--ink);font-size:12.5px;padding:2px 9px;border-radius:6px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.more{background:none;border:0;color:var(--accent);padding:0;font-weight:600;text-align:left}
+.detail{border-top:1px solid var(--line);padding-top:10px;font-size:14.5px}
+.detail[hidden]{display:none}
+.detail ul{margin:6px 0 0;padding-left:18px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.skills div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+.skills h3{font-size:17px;margin-bottom:8px}
+.tl{border-left:2px solid var(--line);margin-left:6px}
+.job{padding:0 0 22px 20px;position:relative}
+.job:before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.job h3{font-size:18px}
+.job .meta{color:var(--muted);font-size:14px}
+.job ul{margin:8px 0 0;padding-left:18px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.two ul{padding-left:18px;margin:0}
+.two li{margin-bottom:8px}
+footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;color:var(--muted);font-size:14px}
+
+.thumb{display:block;width:100%;aspect-ratio:16/9;border:1px dashed var(--line);border-radius:8px;background:var(--soft);color:var(--muted);font-size:13px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px;overflow:hidden;position:relative}
+.thumb.ok{border:0;padding:0;cursor:zoom-in}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb .n{position:absolute;right:8px;bottom:8px;background:var(--ink);color:var(--bg);border-radius:6px;padding:1px 8px;font-size:12px}
+.pdfbtn{align-self:flex-start;font-size:14px}
+#lb{position:fixed;inset:0;background:rgba(5,12,10,.88);z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px}
+#lb[hidden]{display:none}
+#lb img,#lb iframe{max-width:100%;max-height:78vh;border-radius:8px;background:#fff}
+#lb iframe{width:min(960px,100%);height:78vh;border:0}
+#lb .bar{display:flex;gap:10px;margin-top:12px;align-items:center;color:#fff}
+#lb button{background:#fff;color:#111;border:0;border-radius:8px;padding:6px 14px}
+
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tabs button{background:var(--surface);border:1px solid var(--line);color:var(--ink);padding:8px 16px;border-radius:8px;font-weight:600}
+.tabs button[aria-selected=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.panel{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.panel[hidden]{display:none}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+.box h3{font-size:18px;margin-bottom:8px}
+.box p{margin:6px 0;color:var(--muted);font-size:15px}
+.code{background:#0f1b2d;color:#d6e2f0;border-radius:10px;overflow:hidden;margin-bottom:14px}
+.code .top{display:flex;justify-content:space-between;align-items:center;padding:6px 12px;background:#17263d;font-size:13px;color:#9fb3c8}
+.code .top button{background:#2a4163;color:#fff;border:0;border-radius:6px;padding:2px 10px;font-size:12px}
+.code pre{margin:0;padding:12px;overflow-x:auto;font:13px/1.6 ui-monospace,Consolas,monospace}
+.k{color:#ff8fb1}.f{color:#ffd479}.c{color:#7f93a8}.s{color:#8fe3a3}
+.kpi{border-left:3px solid var(--accent);padding:4px 14px;margin-bottom:12px}
+.kpi b{display:block;font:700 34px Fraunces,serif;color:var(--accent)}
+.pg{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.pg button{background:var(--soft);border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:4px 12px;font-size:14px}
+.pg button[aria-pressed=true]{background:var(--accent);color:var(--accent-ink)}
+.shot{margin-top:10px}
+.shot .hint{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;border:1px dashed var(--line);border-radius:8px;background:var(--soft);color:var(--muted);font-size:13px;text-align:center;padding:8px}
+.shot button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.shot img{width:100%;border-radius:8px;display:block}
+</style>
+</head>
+<body>
+<header class="nav"><div class="in">
+<b>Mayada Salama</b>
+<a href="#projects">Projects</a><a href="#showcase">Showcase</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#contact">Contact</a>
+<button id="theme" aria-label="Toggle dark mode">Theme</button>
+</div></header>
+<main>
+<section class="hero">
+<p class="roles">Healthcare Data Analyst · Biostatistician · Health Informatician</p>
+<h1>Clinical data, turned into decisions.</h1>
+<p class="lead">I pair 18+ years of clinical pharmacy practice with Python, SQL and Power BI. I clean hospital datasets, build KPI dashboards and run statistical analyses that hospital managers and clinicians can act on.</p>
+<div class="cta">
+<a class="btn p" href="#projects">View projects</a>
+<a class="btn" href="https://github.com/mayadasalama2020">GitHub</a>
+<a class="btn" href="https://linkedin.com/in/mayada-salama-04a0221b5">LinkedIn</a>
+</div>
+<div class="stats">
+<div class="stat"><b>18+</b><span>years in clinical pharmacy</span></div>
+<div class="stat"><b>2</b><span>peer-reviewed publications</span></div>
+<div class="stat"><b>56K</b><span>patients in the healthcare dashboard</span></div>
+<div class="stat"><b>3</b><span>hospitals in the performance dashboards</span></div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="chips" role="group" aria-label="Filter projects">
+<button class="chip" data-f="all" aria-pressed="true">All</button>
+<button class="chip" data-f="powerbi" aria-pressed="false">Power BI</button>
+<button class="chip" data-f="excel" aria-pressed="false">Excel</button>
+<button class="chip" data-f="sql" aria-pressed="false">SQL</button>
+<button class="chip" data-f="python" aria-pressed="false">Python</button>
+<button class="chip" data-f="web" aria-pressed="false">Web app</button>
+<button class="chip" data-f="research" aria-pressed="false">Clinical research</button>
+</div>
+<div class="grid" id="grid">
+
+<article class="card" data-slug="dic" data-c="web">
+<h3>DIC Performance Monitor</h3>
+<div class="tags"><span class="tag">Web app</span><span class="tag">Arabic RTL</span><span class="tag">Google AI Studio</span></div>
+<p>Arabic right-to-left web app that tracks the monthly performance of hospital Drug Information Centers across Dakahlia Governorate.</p>
+<button class="more" aria-expanded="false">Show details</button>
+<div class="detail" hidden><ul><li>Built for the Dakahlia Health Affairs pharmacy supervision team.</li><li>Monthly reporting across multiple facilities in one view.</li></ul>
+<p><a href="https://dic-dakahlia-performance.ai.studio">Open live app</a></p></div>
+</article>
+
+<article class="card" data-slug="healthcare" data-c="powerbi">
+<h3>Healthcare Data Analytics Dashboard</h3>
+<div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">KPI design</span></div>
+<p>Five-page interactive dashboard (Executive, Patient, Hospital, Clinical, Financial) covering 56K patients, admissions, length of stay and billing.</p>
+<button class="more" aria-expanded="false">Show details</button>
+<div class="detail" hidden><ul><li>Executive page for headline KPIs; drill-down pages for patients, hospitals, clinical and financial views.</li><li>Slicers let users filter every page together.</li></ul>
+<p><a href="https://github.com/mayadasalama2020"><!-- TODO: replace with repo link -->Repository</a></p></div>
+</article>
+
+<article class="card" data-slug="hospital" data-c="powerbi sql">
+<h3>Hospital Performance Dashboards</h3>
+<div class="tags"><span class="tag">Power BI</span><span class="tag">Star Schema</span><span class="tag">Power Query M</span></div>
+<p>KPI dashboards and Star Schema models for clinical pharmacy performance at Mansoura General, Talkha Central and Mit Ghamr hospitals.</p>
+<button class="more" aria-expanded="false">Show details</button>
+<div class="detail" hidden><ul><li>Star Schema model with fact and dimension tables for consistent KPI definitions.</li><li>Data prepared with Power Query M; measures written in DAX.</li></ul>
+<p><a href="https://github.com/mayadasalama2020"><!-- TODO: replace with repo link -->Repository</a></p></div>
+</article>
+
+<article class="card" data-slug="sql" data-c="sql">
+<h3>Clinical Pharmacy Performance Analysis</h3>
+<div class="tags"><span class="tag">SQL Server</span><span class="tag">SSMS</span></div>
+<p>Designed the schema and wrote SELECT, GROUP BY and ORDER BY queries to rank hospitals by pharmacy interventions.</p>
+<button class="more" aria-expanded="false">Show details</button>
+<div class="detail" hidden><ul><li>Handled Arabic text with NVARCHAR fields.</li><li>Queries cover extraction, filtering and data-quality checks.</li></ul>
+<p><a href="https://github.com/mayadasalama2020"><!-- TODO: replace with repo link -->Repository</a></p></div>
+</article>
+
+<article class="card" data-slug="sales" data-c="excel powerbi">
+<h3>Sales Performance Dashboard</h3>
+<div class="tags"><span class="tag">Excel</span><span class="tag">Power BI</span><span class="tag">Slicers</span></div>
+<p>Slicer-driven KPI report with revenue, quantity and customer metrics, plus category, region and product-mix breakdowns.</p>
+<button class="more" aria-expanded="false">Show details</button>
+<div class="detail" hidden><ul><li>Slicers filter all KPIs and charts at once.</li></ul></div>
+</article>
+<article class="card" data-slug="housing" data-c="python">
+<h3>Housing &amp; Population Data Analysis</h3>
+<div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">Seaborn</span></div>
+<p>End-to-end exploratory analysis of 9,917 records across 4 nations: cleaning, feature engineering, correlation analysis and regression modeling.</p>
+<button class="more" aria-expanded="false">Show details</button>
+<div class="detail" hidden><ul><li>Tools: Pandas, NumPy, Scikit-learn, Seaborn, Matplotlib.</li></ul>
+<p><a href="https://github.com/mayadasalama2020"><!-- TODO: replace with notebook link -->Notebook</a></p></div>
+</article>
+
+<article class="card" data-slug="icu" data-c="research python">
+<h3>ICU Medication-Error Project</h3>
+<div class="tags"><span class="tag">EDA</span><span class="tag">Patient safety</span></div>
+<p>Exploratory analysis of medication errors in the ICU ordering process, from the "EDA 100 Projects in ICU" initiative.</p>
+<button class="more" aria-expanded="false">Show details</button>
+<div class="detail" hidden><ul><li>Focus on error patterns in medication ordering.</li><li>Draws on my ICU/CCU clinical pharmacy background.</li></ul></div>
+</article>
+
+<article class="card" data-slug="stewardship" data-c="research">
+<h3>Antimicrobial Stewardship</h3>
+<div class="tags"><span class="tag">Clinical research</span><span class="tag">Cohort study</span></div>
+<p>Stewardship activities organized by WHO, and co-authored research on linezolid use and susceptibility in ICU patients with MRSA.</p>
+<button class="more" aria-expanded="false">Show details</button>
+<div class="detail" hidden><ul><li>Published in BMC Infectious Diseases (2024).</li></ul></div>
+</article>
+</div>
+</section>
+
+<section id="showcase">
+<h2>Project showcase</h2>
+<div class="tabs" role="tablist">
+<button role="tab" data-t="bi" aria-selected="true">Power BI</button>
+<button role="tab" data-t="xl" aria-selected="false">Excel</button>
+<button role="tab" data-t="sq" aria-selected="false">SQL</button>
+<button role="tab" data-t="py" aria-selected="false">Python</button>
+</div>
+<div class="panel" id="p-bi">
+<div class="box"><h3>Healthcare Data Analytics Dashboard</h3>
+<div class="kpi"><b>56,000+</b>patients analyzed</div>
+<p>Five-page dashboard built to monitor hospital operational efficiency and clinical quality. Select a page:</p>
+<div class="pg" id="pgs">
+<button aria-pressed="true" data-d="Headline KPIs across all patient records.">Executive</button>
+<button aria-pressed="false" data-d="Demographics, admission trends, length of stay and blood type distribution.">Patient</button>
+<button aria-pressed="false" data-d="Multi-facility comparison of interventions and outcomes.">Hospital</button>
+<button aria-pressed="false" data-d="Clinical pages for pharmacist interventions and medication expenditure.">Clinical</button>
+<button aria-pressed="false" data-d="Billing KPIs and financial reconciliation.">Financial</button></div>
+<p id="pgd">Headline KPIs across all patient records.</p></div>
+<div class="box"><h3>Modeling &amp; ETL workflow</h3>
+<p>Integrated data from separate hospital sources with Power Query (M), built Fact/Dimension star schemas, and wrote dynamic DAX measures for date filtering and cohort segmentation.</p>
+<p><b>Impact:</b> gives hospital directors visibility into bed occupancy, medication expenditure and clinical pharmacist interventions.</p><div class="shot" data-slug="dashboard"><div class="hint">Add images/dashboard-1.png</div></div></div></div>
+<div class="panel" id="p-xl" hidden>
+<div class="box"><h3>Sales Performance Dashboard</h3>
+<p>Slicer-driven KPI reporting in Excel and Power BI: revenue, quantity and customer metrics, with category, region and product-mix breakdowns.</p>
+<p>Filter by slicer to see every KPI and chart update together.</p></div>
+<div class="box"><div class="shot" data-slug="excel"><div class="hint">Add images/excel-1.png</div></div></div></div>
+<div class="panel" id="p-sq" hidden>
+<div class="box"><h3>Clinical Pharmacy Performance Analysis</h3>
+<p>Designed the relational schema in SSMS to consolidate pharmacy logs from several hospitals, then used aggregation queries (GROUP BY, ORDER BY, SUM, WHERE) to compare intervention volumes.</p>
+<p>Result: a ranking of Mansoura General, Talkha Central and Mit Ghamr hospitals by interventions.</p><div class="shot" data-slug="sql-output"><div class="hint">Add images/sql-output-1.png</div></div></div>
+<div><div class="code"><div class="top"><span>schema_definition.sql</span><button type="button" class="copy">Copy</button></div><pre><span class="k">CREATE TABLE</span> C_pharmacy_performance (
+  record_id <span class="k">INT PRIMARY KEY</span>,
+  hospital_name <span class="k">VARCHAR</span>(100),
+  interventions_count <span class="k">INT</span>,
+  month <span class="k">VARCHAR</span>(20)
+);</pre></div><div class="code"><div class="top"><span>aggregation_query.sql</span><button type="button" class="copy">Copy</button></div><pre><span class="k">SELECT</span> hospital_name,
+  <span class="f">SUM</span>(interventions_count) <span class="k">AS</span> total_interventions
+<span class="k">FROM</span> C_pharmacy_performance
+<span class="k">GROUP BY</span> hospital_name
+<span class="k">ORDER BY</span> total_interventions <span class="k">DESC</span>;</pre></div></div></div>
+<div class="panel" id="p-py" hidden>
+<div class="box"><h3>Population &amp; Housing Analysis</h3>
+<p>Analyzed 9,917 population records across 4 countries with Python: feature engineering (Z-scores, gender percentage ratios), regression and correlation between houses and members, and a time-series view of monthly member growth.</p><div class="shot" data-slug="python"><div class="hint">Add images/python-1.png</div></div></div>
+<div><div class="code"><div class="top"><span>eda_pipeline.py</span><button type="button" class="copy">Copy</button></div><pre><span class="c"># 1. Temporal analysis &amp; regression</span>
+<span class="k">import</span> pandas <span class="k">as</span> pd, seaborn <span class="k">as</span> sns
+sns.<span class="f">lineplot</span>(data=df, x=<span class="s">'Date'</span>, y=<span class="s">'Total_Members'</span>)
+sns.<span class="f">regplot</span>(data=df, x=<span class="s">'Houses'</span>, y=<span class="s">'Members'</span>)
+
+<span class="c"># 2. Correlation matrix heatmap</span>
+corr = df.<span class="f">corr</span>()
+sns.<span class="f">heatmap</span>(corr, annot=<span class="k">True</span>, cmap=<span class="s">'coolwarm'</span>)</pre></div></div></div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Programming &amp; querying</h3><div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">SQL (SSMS)</span><span class="tag">R</span></div></div>
+<div><h3>Business intelligence</h3><div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query M</span><span class="tag">Star Schema</span><span class="tag">Excel</span></div></div>
+<div><h3>Analysis &amp; statistics</h3><div class="tags"><span class="tag">Biostatistics</span><span class="tag">Hypothesis testing</span><span class="tag">Regression</span><span class="tag">Cohort analysis</span><span class="tag">EDA</span></div></div>
+<div><h3>Healthcare analytics</h3><div class="tags"><span class="tag">KPI reporting</span><span class="tag">Patient safety data</span><span class="tag">Clinical data management</span><span class="tag">GCP</span></div></div>
+</div>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<div class="tl">
+<div class="job"><h3>Freelance Data Analyst &amp; Biostatistician</h3><div class="meta">Independent consultant, remote · 2024 – present</div>
+<ul><li>Clean multi-year healthcare datasets: duplicates, missing values and inconsistent formats.</li><li>Write SSMS queries for extraction and troubleshooting, including Arabic NVARCHAR fields.</li><li>Design Power BI dashboards, KPI frameworks and Star Schema models for multi-facility hospital monitoring.</li><li>Run hypothesis testing, regression and cohort analysis for clinical research.</li></ul></div>
+<div class="job"><h3>Clinical Pharmacy Inspector &amp; Health Informatician</h3><div class="meta">Dakahlia Health Affairs · Jan 2024 – present</div>
+<ul><li>Supervise clinical pharmacy activity across Dakahlia facilities with data-driven quality audits.</li><li>Apply health informatics: automation planning, change management, communication planning.</li></ul></div>
+<div class="job"><h3>Chief Clinical Research Coordinator</h3><div class="meta">Gomhoria General Hospital, Alexandria · Aug 2021 – Aug 2022</div>
+<ul><li>Managed clinical data workflows and trial documentation to international GCP standards.</li><li>Contributed to quality assessments of medication-ordering and ICU processes.</li></ul></div>
+<div class="job"><h3>Senior Clinical Pharmacist</h3><div class="meta">Ministry of Health hospitals · Feb 2016 – Dec 2023</div>
+<ul><li>ICU/CCU clinical pharmacy, medication safety, clinical research and undergraduate training.</li></ul></div>
+</div>
+</section>
+
+<section id="research">
+<h2>Research, education &amp; certifications</h2>
+<div class="two">
+<div><h3>Publications</h3><ul>
+<li>Swidan, H., Salama, M., Saleh, E., et al. (2024). Impact of an antimicrobial stewardship program on optimizing linezolid consumption and susceptibility in ICU patients with MRSA. <i>BMC Infectious Diseases</i>.</li>
+<li>Ashmawy, E., Sharaf, S., Salama, M., et al. (2022). Oxygen saturation in hospitalized COVID-19 patients and its relation to colchicine treatment. <i>Medicina</i>.</li></ul></div>
+<div><h3>Education &amp; certifications</h3><ul>
+<li>DEPI Data Analytics Technical Track (in progress, 2026)</li>
+<li>IBM SkillsBuild: Watson Studio, Data Science in Our World, Data Tools and Languages (2026)</li>
+<li>Professional Health Informatics Diploma, MOHP HITS-TC (2022–2023)</li>
+<li>Clinical Scholar, Harvard Medical School ECSRT (2021); BMJ &amp; UCSF (2022)</li>
+<li>Biostatistical Programming, Advanced Biostatistics, CDM, GCP, NIH clinical research</li>
+<li>B.Pharm (2006) and Clinical Pharmacy Diploma (2011), Mansoura University</li></ul></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Open to healthcare analytics, biostatistics and dashboard projects. Based in Mansoura, Egypt. Fluent in Arabic and English.</p>
+<div class="cta">
+<a class="btn p" href="mailto:mayadasalama2020@gmail.com">Email me</a>
+<a class="btn" href="https://linkedin.com/in/mayada-salama-04a0221b5">LinkedIn</a>
+<a class="btn" href="https://github.com/mayadasalama2020">GitHub</a>
+</div>
+<div class="cta" id="freelance"></div>
+</section>
+</main>
+<footer>© Mayada Salama</footer>
+<script>
+document.querySelectorAll('.more').forEach(function(b){
+  b.addEventListener('click',function(){
+    var d=b.nextElementSibling,open=d.hidden;
+    d.hidden=!open;b.setAttribute('aria-expanded',open);
+    b.textContent=open?'Hide details':'Show details';
+  });
+});
+var chips=document.querySelectorAll('.chip');
+chips.forEach(function(c){
+  c.addEventListener('click',function(){
+    chips.forEach(function(x){x.setAttribute('aria-pressed',x===c)});
+    var f=c.dataset.f;
+    document.querySelectorAll('.card').forEach(function(card){
+      card.hidden=!(f==='all'||card.dataset.c.split(' ').indexOf(f)>-1);
+    });
+  });
+});
+document.getElementById('theme').addEventListener('click',function(){
+  var r=document.documentElement,
+  dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+  r.dataset.theme=dark?'light':'dark';
+});
+</script>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Project gallery" hidden>
+<div id="lbc"></div>
+<div class="bar"><button id="prev" aria-label="Previous">&larr;</button><span id="cap"></span><button id="next" aria-label="Next">&rarr;</button><button id="close">Close</button></div>
+</div>
+<script>
+/* EDIT HERE: add your screenshots (images/ folder) and PDF exports per project. */
+var PROJECTS={
+ dic:{imgs:['images/dic-1.png','images/dic-2.png'],pdf:''},
+ healthcare:{imgs:['images/healthcare-1.png','images/healthcare-2.png','images/healthcare-3.png'],pdf:'pdf/healthcare-dashboard.pdf'},
+ hospital:{imgs:['images/hospital-1.png','images/hospital-2.png'],pdf:'pdf/hospital-performance.pdf'},
+ sql:{imgs:['images/sql-1.png'],pdf:''},
+ housing:{imgs:['images/housing-1.png','images/housing-2.png'],pdf:''},
+ icu:{imgs:['images/icu-1.png'],pdf:''},
+ stewardship:{imgs:[],pdf:''},
+ sales:{imgs:[],pdf:''}
+};
+var lb=document.getElementById('lb'),lbc=document.getElementById('lbc'),cap=document.getElementById('cap'),cur=[],idx=0,lastFocus;
+function show(){var u=cur[idx];lbc.innerHTML='';
+ var el=u.slice(-4)==='.pdf'?document.createElement('iframe'):document.createElement('img');
+ el.src=u;if(el.tagName==='IMG')el.alt='Project screenshot '+(idx+1);lbc.appendChild(el);
+ cap.textContent=(idx+1)+' / '+cur.length;}
+function openLb(list,i){cur=list;idx=i||0;lastFocus=document.activeElement;lb.hidden=false;show();document.getElementById('close').focus();}
+function closeLb(){lb.hidden=true;lbc.innerHTML='';if(lastFocus)lastFocus.focus();}
+document.getElementById('close').onclick=closeLb;
+document.getElementById('prev').onclick=function(){idx=(idx+cur.length-1)%cur.length;show();};
+document.getElementById('next').onclick=function(){idx=(idx+1)%cur.length;show();};
+lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
+document.addEventListener('keydown',function(e){if(lb.hidden)return;
+ if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')document.getElementById('prev').click();if(e.key==='ArrowRight')document.getElementById('next').click();});
+var EXTS=['png','jpg','jpeg','webp','PNG','JPG','JPEG'],MAXN=6;
+function probe(u){return new Promise(function(res){var i=new Image();i.onload=function(){res(true)};i.onerror=function(){res(false)};i.src=u;});}
+async function findImages(slug,listed){
+ var found=[];
+ for(var k=0;k<listed.length;k++){if(await probe(listed[k]))found.push(listed[k]);}
+ for(var n=1;n<=MAXN;n++){
+  var hit=null;
+  for(var e=0;e<EXTS.length&&!hit;e++){var u='images/'+slug+'-'+n+'.'+EXTS[e];
+   if(found.indexOf(u)>-1){hit=u;break;}
+   if(await probe(u))hit=u;}
+  if(hit){if(found.indexOf(hit)<0)found.push(hit);}else if(n>1)break;
+ }
+ return found;
+}
+document.querySelectorAll('.card').forEach(function(card){
+ var slug=card.dataset.slug,p=PROJECTS[slug];if(!p)return;
+ var t=document.createElement('button');t.className='thumb';t.type='button';
+ t.textContent='No screenshot found. Add images/'+slug+'-1.png';
+ card.insertBefore(t,card.firstChild);
+ if(p.pdf){var addPdf=function(){var b=document.createElement('button');b.className='btn pdfbtn';b.type='button';b.textContent='View PDF report';
+  b.onclick=function(){openLb([p.pdf],0);};
+  card.insertBefore(b,card.querySelector('.more'));};
+  if(location.protocol==='file:'){addPdf();}
+  else{fetch(p.pdf,{method:'HEAD'}).then(function(r){if(r.ok)addPdf();}).catch(function(){});}}
+ findImages(slug,p.imgs).then(function(list){
+  if(!list.length)return;
+  var im=new Image();im.alt='';im.src=list[0];
+  t.textContent='';t.className='thumb ok';t.appendChild(im);
+  if(list.length>1){var n=document.createElement('span');n.className='n';n.textContent=list.length+' images';t.appendChild(n);}
+  t.setAttribute('aria-label','Open gallery');
+  t.onclick=function(){openLb(list,0);};
+ });
+});
+</script>
+<script>
+document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){
+ document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-selected',x===b)});
+ document.querySelectorAll('.panel').forEach(function(p){p.hidden=p.id!=='p-'+b.dataset.t});});});
+document.querySelectorAll('#pgs button').forEach(function(b){b.addEventListener('click',function(){
+ document.querySelectorAll('#pgs button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+ document.getElementById('pgd').textContent=b.dataset.d;});});
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+ var t=b.closest('.code').querySelector('pre').textContent;
+ if(navigator.clipboard)navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1500);});});});
+document.querySelectorAll('.shot').forEach(function(el){
+ findImages(el.dataset.slug,[]).then(function(list){if(!list.length)return;
+  el.innerHTML='';var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Open picture');
+  var im=new Image();im.alt='';im.src=list[0];b.appendChild(im);b.onclick=function(){openLb(list,0);};el.appendChild(b);});});
+</script>
+<script>
+/* EDIT HERE: paste your profile links between the quotes. Empty ones stay hidden. */
+var FREELANCE={Upwork:'https://www.upwork.com/freelancers/~011bf289d24270e7fb',Mostaql:'https://mostaql.com/u/mayadasalama',Khamsat:'https://khamsat.com/user/mayada_salama',Freelancer:''};
+(function(){var box=document.getElementById('freelance');
+ Object.keys(FREELANCE).forEach(function(k){if(!FREELANCE[k])return;
+  var a=document.createElement('a');a.className='btn';a.href=FREELANCE[k];a.textContent='Hire me on '+k;a.rel='noopener';box.appendChild(a);});})();
+</script>
+</body>
+</html>
